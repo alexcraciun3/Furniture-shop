@@ -1,0 +1,139 @@
+// grey-banner 
+
+.grey-banner{
+    background-color: rgba(84,93,99,255);
+}
+
+.grey-banner-text {
+    max-width: 520px;
+    text-align: center;
+    color:white;
+    margin: 0 auto;
+    padding: 3rem 5rem;
+    ul {
+        @include flex(space-evenly, center, row);
+        text-align: center;
+        flex-wrap: wrap;
+        li  {
+            margin: 1.5rem 2rem 0 2rem;
+            cursor: pointer;
+            a {
+                color:white;
+                border-bottom:1px solid white;
+                
+            }
+        }
+    }
+    h1,p {
+        padding:0.5rem; 
+    }
+}
+
+
+
+
+
+// left side of sticky navigation
+
+.sticky-nav {
+    @include flex(space-between, center, row);
+    padding:1rem;
+    position: sticky;
+    top:0;
+    z-index: 99;
+    background-color: white
+}
+.main-nav {
+    @include flex(space-between, center, row);
+    width: 40%;
+}
+
+
+
+
+.logo {
+        width: 35px;
+        height: 35px;
+        background-image: url("./icons/couch.svg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 4rem;
+        animation: slideInLeft 1.5s ease-in-out
+      
+    
+}
+.nav-links {
+    width: 15%;
+    @include flex(space-around, center, row);
+    a {
+        color:rgb(100, 98, 98);
+        margin-right: 2.5rem;
+        text-transform: uppercase;
+    }
+    a:hover{
+        border-bottom:1px solid rgb(100, 98, 98);
+    }
+}
+.main-nav input[type=text] {
+    border: none;
+    background-color: #f5f6f4;
+}
+.main-nav button{
+    background-color: #f5f6f4;
+    color: black;
+    padding:0.75rem ;
+    border: none;
+    cursor: pointer;
+
+}
+
+.nav-links {
+    margin-right: 1rem;
+}
+.search-bar,
+.search-bar button,
+.search-bar input {
+background-color: #f1f2f0;
+}```
+    background-color: #f1f2f0;;
+}
+// icon navigation 
+
+.icon-nav {
+    width: 15%;
+}
+.icon-nav ul {
+    @include flex(space-around, center, row);
+}
+.icon-nav img{
+    width: 2.5rem;
+    height: auto;
+    cursor: pointer;
+}
+.icon-nav img:hover {
+    animation: flash ease 1s;
+    
+}
+
+//submenu links
+
+.submenu-links ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    li {
+        margin-right: 1rem;
+    }
+}
+.submenu-links ul a{
+    cursor: pointer;
+}
+.submenu-links ul li:first-child a {
+    color:rgb(252, 80, 80);
+}
+.submenu-links p span {
+   text-decoration: underline dotted red;
+}
+
+

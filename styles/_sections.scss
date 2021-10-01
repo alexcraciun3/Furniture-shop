@@ -1,0 +1,298 @@
+    // first presenation with text and image
+
+.hero > p {
+    padding-top: 3rem;
+    width: 100%;
+    span {
+        color:grey;
+    }
+}
+
+
+
+.hero-img img {
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+} 
+.img-description {
+    @include flex(space-between, center, row);
+    background-color: #f1f2f0;
+    padding: 5rem 3rem;
+    
+    h3 {
+        width: 50%;
+        text-align: center;
+    }
+    p {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+.text-header {
+    text-align: center;
+   
+    h4 {
+        padding-top: 3rem;
+        margin:1rem;
+    }
+    p {
+        padding-bottom: 5rem;
+    }
+}
+
+//second presentations
+
+.presentation{
+    @include flex(space-between, center, row);
+    width: 100%;
+    padding: 4rem 2rem;
+}
+
+.pre-image {
+    width: 50%;
+}
+.pre-image img {
+    width: 100%;
+    display: block;
+    height: 400px;
+}
+
+article.description {
+    width: 50%;
+    margin-left:10rem;
+    p{
+        padding: 1rem 0;
+        margin-bottom: 3rem;
+        line-height: 24px;
+        strong {
+            border-bottom:1px solid black;
+        }
+    }
+}
+.third article {
+    margin-right: 10rem;
+    margin-left:0;
+    
+}
+.blacky{
+    padding: 1.5rem 3rem;
+    background: #222321;
+    border:2px solid #222321;
+    outline: none;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.8s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+.blacky span {
+    color: white;
+    transition: all 0.5s ease;
+}
+.blacky:hover {
+    background:#efeee5;
+    span {
+        color:black;
+    }
+    .button-loading::after {
+        border-top-color:black;
+    }
+
+}
+.button-loading span {
+    visibility: hidden;
+    opacity: 0;
+}
+.button-loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: black;
+    border-radius: 50%;
+    animation: button-loading-spin 1s ease infinite 0.2s;
+}
+@keyframes button-loading-spin {
+    from {
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+//gallery 
+
+.gallery {
+    @include flex (space-between, center, row);
+    width: 100%;
+    padding:2rem;
+}
+.gallery-img {
+    width:32.5%;
+    text-align: center;
+    h4,p {
+        padding:1rem;
+    }
+    p {
+        font-size: 14px;
+    }
+
+    
+}
+.gallery-img img {
+    display: block;
+    width:100%;
+    height: 350px;
+    text-align:center;
+}
+
+//sliders 
+.slider {
+    @include flex(space-between, center, row);
+    padding-top: 3rem;
+    width: 98%;
+    margin:0 auto;
+    overflow-x: auto;
+    
+    
+    .price{
+        color:red;
+        span {
+            color:grey;
+            text-decoration: line-through;
+            margin-left:0.5rem;
+        }
+    }
+    .label p, .price{
+        font-size: 1.2rem;
+        margin:0.5rem;
+        
+    }
+
+
+}
+.arrows {
+    width: 98%;
+	height: 60px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid #ddd;
+}
+
+.arrows p span{
+    font-size: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #555;
+     width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 3px;
+}
+.arrows p span:hover{
+    background: #222;
+    color: white;
+}
+section::-webkit-scrollbar{
+    display: none;
+}
+
+figure {
+    position: relative;
+	left: 0;
+    transition: 0.5s linear;
+    margin:  0 20px  0 0;
+}
+
+figure img{
+    width:500px;
+    display: inline-block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 1rem;
+  }
+figcaption {
+   @include flex(space-between, center, row);
+}
+.label-title {
+    grid-area: label-title;
+}
+.price {
+  grid-area: price;
+}
+.label-description {
+    grid-area: description;
+    
+}
+.befooter {
+    text-align: center;
+    padding:5rem 0 3rem 0;
+}
+
+
+    
+   
+    
+
+  
+
+
+//email- form
+.email-form {
+    background-color: #efeee5;
+    width: 100%;
+    .container {
+        @include flex (space-around, center, row);
+        width:90%;
+        margin:0 auto;
+        padding:3rem 0;
+    }
+}
+.form-text,form {
+    width:50%;
+}
+.form-text p{
+    margin:1rem 0;
+}
+
+form input[type=email] {
+    padding:0.75rem 20rem;
+    text-align: center;
+    border:2px solid black;
+    background-color: #efeee5;
+    margin-right: 1.5rem;
+}
+.go-button {
+    padding: 0.75rem 4rem;
+    border:2px solid black;
+    box-shadow: none;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    transition: padding 0.3s ease-in-out;
+
+}
+.go-button:hover{
+    background-color: #353534;
+    padding:1rem 4.25rem;
+    
+}
+

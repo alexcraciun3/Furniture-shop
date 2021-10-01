@@ -1,0 +1,114 @@
+footer {
+    width: 100%;
+    background-color: #f8f8f8
+
+}
+
+table, .terms, .footer-icons {
+    margin: 0 auto;
+}
+// table style
+
+table{
+    a {
+        font-size: 12px;
+    }
+    a:hover {
+        text-decoration: underline black;
+    }
+}
+
+th {
+    font-size: 1.75rem;
+    padding: 5rem 10rem 5rem 0rem;
+}
+td {
+    font-size: 12px;
+    padding-bottom:1.5rem;
+}
+
+// links to socials
+
+.footer-icons {
+    border-bottom: 1px solid #979797;
+}
+.footer-icons ul{
+    @include flex (flex-end, center, row);
+    list-style: none;
+    width: 80%;
+}
+.footer-icons img {
+    width: 2.5rem;
+    height: auto;
+    cursor: pointer;
+    margin-right: 2rem;
+    padding-bottom: 4rem;
+}
+
+//terms
+
+.terms {
+    @include flex(space-between, center, row);
+    padding:5rem 0 7rem 0;
+    width: 80%;
+    a,p {
+        font-size: 12px;
+    }
+    ul{
+        @include flex(space-between,center, row);
+        width:35%;
+    }
+}
+
+footer .trust {
+    display: none;
+    text-align: center;
+  }
+  footer .trust img {
+    width: 150px;
+  }
+
+  .accordion {
+    display: none;
+  }
+
+  .summary-links{
+      @include flex(center, center, column);
+  }
+  .summary-links li {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(202, 200, 200); 
+    padding:1.5rem;
+  }
+
+ 
+  summary {
+    list-style: none;
+    font-size: 1.8rem;
+    padding: 2rem;
+    border-bottom: 1px solid rgb(202, 200, 200); 
+    position: relative;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary::after {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f078";
+  }
+  details[open] .summary-links {
+    background-color: #eee;
+  }
+  details[open] summary::after {
+    content: "\f077";
+  }
+  details[open] summary ~ * {
+    animation: dropdown .5s ease-in-out ;
+  }
+  

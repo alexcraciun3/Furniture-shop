@@ -1,0 +1,42 @@
+$header1:calc(2.25rem + 0.5vw);
+$header2:1.5rem;
+$header3:4rem;
+$header4:2.25rem ;
+$text:1.75rem ;
+$gray-text: #2c2c2c;
+
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+
+  .burger{
+    display: none;
+  }
+  main {
+    width: 80%;
+    margin:0 auto;
+    position: relative;
+  }
+ 
+
+  hr{
+    width:80%;
+    border: none;
+    height: 1px;
+    margin: 5rem auto;
+    background-color: rgb(202, 200, 200);
+  }
+  
+  
+  
+  
+  @import "global";
+  @import "navigation";
+  @import "sections";
+  @import "footer";
+  @import "responsive";
+
+  
